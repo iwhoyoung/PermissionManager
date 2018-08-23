@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Permission Library</string>
+
+    <string name="tip_loading">正在加载</string>
+    <string name="tip_no_permission">App需要您拒绝的权限或悬浮框与修改系统设置权限，是否去设置？（为提高体验请尽量选择信任此应用或允许所有权限以及保持后台运行）</string>
+    <string name="go_setting">去设置</string>
+    <string name="setting">设置</string>
+    <string name="exit_app">退出应用</string>
+    <string name="cancel">取消</string>
+</resources>
