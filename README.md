@@ -9,18 +9,18 @@
 			public void onPermissionDenied(List<String> deniedPermission);
 ```
 		3.该方法在权限请求，且用户同意了所有方法后调用：
-		```java
+```java
 			public void onPermissionGranted();
-			```
+```
 	PermissionManager为单例类，在需要请求权限的位置调用如下代码：
-	```java
+```java
 		PermissionManager.getInstance(this).oneKeyRequest();
-		```
+```
 	重写onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults)方法，加入代码：
-	```java
+```java
 		PermissionManager.getInstance(this).onPermissionResult(requestCode,permissions,grantResults);
-		```
+```
 	重写onActivityResult(int requestCode, int resultCode, Intent data)方法，加入代码：
-	```java
+```java
 		        PermissionManager.getInstance(this).onActivityResult(requestCode,resultCode,data);
-			```
+```
