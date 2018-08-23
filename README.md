@@ -1,5 +1,5 @@
 # PermissionManagerDemo
-在接口OnPermitListener中有3个方法，如下：
+在接口OnPermitListener中有3个方法，如下：<br>
 1.该方法在查询权限时，返回被拒绝并不再提示的权限：
 ```java
 protected void onActivityResult(int requestCode, int resultCode, Intent data)；
