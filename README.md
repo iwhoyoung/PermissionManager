@@ -24,3 +24,20 @@ PermissionManager.getInstance(this).onPermissionResult(requestCode,permissions,g
 ```java
 PermissionManager.getInstance(this).onActivityResult(requestCode,resultCode,data);
 ```
+Usage
+===
+Step 1. Add it in your root build.gradle at the end of repositories:
+```java
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+Step 2. Add the dependency
+```java
+	dependencies {
+	        implementation 'com.github.iwhoyoung:PermissionManagerDemo:1.0.0'
+	}
+```
