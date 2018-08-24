@@ -2,22 +2,17 @@ package com.liyuanheng.www.permissionlibrary;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.AppOpsManager;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
-import android.os.Binder;
 import android.os.Build;
 import android.provider.Settings;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
-import android.util.Log;
 
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -151,7 +146,7 @@ public class PermissionManager {
             case REQUEST_PERMISSION_CODE:
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                     deniedPermissions = new ArrayList<>();
-                    if(results !=null) {
+                    if (results != null) {
                         for (int i = 0; i < results.length; i++) {
                             //未授权
                             if (results[i] != PackageManager.PERMISSION_GRANTED) {
@@ -268,7 +263,6 @@ public class PermissionManager {
     }
 
     public boolean checkSpecialPermissionIfNeed() {
-        Log.i(TAG, "isAlertWinPermRequest:" + checkFloatPermission(getActivity(mContext)) + ",isWriteSetPermRequest:" + checkWriteSettingPermission(getActivity(mContext)));
         return (!isAlertWinPermRequest || checkFloatPermission(getActivity(mContext)))
                 && (!isWriteSetPermRequest || checkWriteSettingPermission(getActivity(mContext)));
     }
