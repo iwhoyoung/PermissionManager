@@ -50,17 +50,22 @@ public class PermissionManager {
     // 用户是否确认了解释框的
     private boolean mIsPositive = false;
 
-    public static PermissionManager getInstance(Activity context) {
+    public static PermissionManager getInstance() {
+        return sPermissionManager;
+    }
+
+    public static PermissionManager init(Activity context) {
         if (sPermissionManager == null)
             sPermissionManager = new PermissionManager(context);
         return sPermissionManager;
     }
 
-    public static PermissionManager getInstance(Fragment context) {
+    public static PermissionManager init(Fragment context) {
         if (sPermissionManager == null)
             sPermissionManager = new PermissionManager(context);
         return sPermissionManager;
     }
+
 
     private PermissionManager setPermissions(String... permissions) {
         this.mPermissions = new ArrayList<>(Arrays.asList(permissions));
