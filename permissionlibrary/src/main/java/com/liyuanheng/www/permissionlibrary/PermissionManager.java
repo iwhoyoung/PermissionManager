@@ -126,7 +126,7 @@ public class PermissionManager {
             return;
         }
         //应用采用adb安装后第一次也会被调用
-        if (rationales.size() > 0 || !checkSpecialPermissionIfNeed() && mOnPermitListener != null) {
+        if ((rationales.size() > 0 || !checkSpecialPermissionIfNeed()) && mOnPermitListener != null) {
             mOnPermitListener.onPermissionDeniedForever(rationales/*.toArray(new String[rationales.size()])*/);
         }
         if (deniedPermissions.size() == 0) {
