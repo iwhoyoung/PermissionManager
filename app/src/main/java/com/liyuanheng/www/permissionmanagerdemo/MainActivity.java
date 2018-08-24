@@ -18,8 +18,7 @@ public class MainActivity extends AppCompatActivity implements PermissionManager
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        PermissionManager.init(this);
-        PermissionManager.getInstance().oneKeyRequest("android.permission.WRITE_EXTERNAL_STORAGE", "android.permission.READ_EXTERNAL_STORAGE"
+        PermissionManager.init(this).oneKeyRequest("android.permission.WRITE_EXTERNAL_STORAGE", "android.permission.READ_EXTERNAL_STORAGE"
                 ,"android.permission.WRITE_CALENDAR","android.permission.ACCESS_FINE_LOCATION","android.permission.SYSTEM_ALERT_WINDOW","android.permission.WRITE_SETTINGS");
     }
 
